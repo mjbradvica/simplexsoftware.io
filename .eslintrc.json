@@ -7,6 +7,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:vitest/legacy-recommended",
     "plugin:jest-extended/all",
@@ -23,5 +25,10 @@
       "warn",
       { "allowConstantExport": true }
     ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
