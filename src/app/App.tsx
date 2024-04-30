@@ -1,7 +1,9 @@
+import { Title, TitleType } from "../components";
+
 const App: React.FC = () => {
   return (
     <div>
-      <h1>Simplex-Software.io</h1>
+      <Title type={TitleType.One} content="Simplex-Software.io" />
     </div>
   );
 };
