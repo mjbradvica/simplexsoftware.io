@@ -58,11 +58,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Update Browsers
+        run: npx update-browserslist-db@latest
+
       - name: Run Integration Tests
         uses: cypress-io/github-action@v6
         with:
           start: npm run preview
           browser: ${{ matrix.browser }}
+          wait-on: http://localhost:4173
 
   storybook:
     name: Prepare Storybook
