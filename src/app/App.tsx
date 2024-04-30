@@ -1,8 +1,8 @@
 const App: React.FC = () => {
   return (
-    <>
-      <div></div>
-    </>
+    <div>
+      <h1>SimplexSoftware.io</h1>
+    </div>
   );
 };
 
