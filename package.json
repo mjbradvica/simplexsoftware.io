@@ -9,7 +9,7 @@
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "prepare": "husky"
+    "prepare": "npx husky"
   },
   "dependencies": {
     "bulma": "^1.0.0",
