@@ -7,14 +7,15 @@ export default mergeConfig(
     test: {
       coverage: {
         enabled: true,
-        exclude: ["src/main.tsx"],
+        exclude: ["main.tsx"],
         thresholds: {
           branches: 100,
         },
       },
       environment: "jsdom",
       globals: true,
-      setupFiles: ["src/setupTests.ts"],
+      root: "src",
+      setupFiles: ["setupTests.ts"],
     },
   }),
 );
