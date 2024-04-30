@@ -8,8 +8,11 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:react-hooks/recommended",
+    "plugin:vitest/legacy-recommended",
+    "plugin:jest-extended/all",
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended",
+    "plugin:jest-formatting/strict",
     "plugin:prettier/recommended"
   ],
   "ignorePatterns": ["dist"],
