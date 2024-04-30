@@ -1,7 +1,12 @@
-import { expect, describe, it } from "vitest";
+import App from "./App";
+import { render, screen } from "@testing-library/react";
 
-describe("App", () => {
-  it("works", () => {
-    expect(true).toBe(true);
+describe("app", () => {
+  it("renders", () => {
+    render(<App />);
+
+    const element = screen.getByRole("heading", { name: /SimplexSoftware/i });
+
+    expect(element).toBeInTheDocument();
   });
 });
