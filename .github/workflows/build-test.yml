@@ -85,4 +85,4 @@ jobs:
         run: npm run lint
 
       - name: Build Storybook
-        run: npm build-storybook
+        run: npm run build-storybook
