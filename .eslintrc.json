@@ -25,11 +25,21 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["react-refresh"],
   "rules": {
+    "@typescript-eslint/explicit-function-return-type": 2,
+    "@typescript-eslint/array-type": [
+      2,
+      {
+        "default": "generic"
+      }
+    ],
+    "@typescript-eslint/explicit-member-accessibility": 2,
+    "@typescript-eslint/member-ordering": 2,
+    "@typescript-eslint/parameter-properties": 2,
     "react-refresh/only-export-components": [
-      "warn",
+      2,
       { "allowConstantExport": true }
     ],
-    "unicorn/filename-case": ["error", { "case": "pascalCase", "ignore": [] }]
+    "unicorn/filename-case": [2, { "case": "pascalCase", "ignore": [] }]
   },
   "settings": {
     "react": {
