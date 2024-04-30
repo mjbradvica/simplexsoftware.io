@@ -5,7 +5,7 @@ describe("app", () => {
   it("renders", () => {
     render(<App />);
 
-    const element = screen.getByRole("heading", { name: /SimplexSoftware/i });
+    const element = screen.getByRole("heading", { name: /simplex-software/i });
 
     expect(element).toBeInTheDocument();
   });

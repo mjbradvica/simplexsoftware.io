@@ -7,6 +7,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:unicorn/recommended",
     "plugin:sonarjs/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
@@ -27,7 +28,8 @@
     "react-refresh/only-export-components": [
       "warn",
       { "allowConstantExport": true }
-    ]
+    ],
+    "unicorn/filename-case": ["error", { "case": "pascalCase", "ignore": [] }]
   },
   "settings": {
     "react": {
