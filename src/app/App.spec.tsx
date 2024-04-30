@@ -9,4 +9,8 @@ describe("app", () => {
 
     expect(element).toBeInTheDocument();
   });
+
+  it("works with jest extended", () => {
+    expect(true).toBeTrue();
+  });
 });
