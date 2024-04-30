@@ -1,6 +1,9 @@
 {
   "root": true,
-  "env": { "browser": true, "es2020": true },
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
   "parserOptions": {
     "project": "./tsconfig.json"
   },
@@ -19,6 +22,7 @@
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended",
     "plugin:jest-formatting/strict",
+    "plugin:storybook/recommended",
     "plugin:prettier/recommended"
   ],
   "ignorePatterns": ["dist"],
@@ -37,9 +41,17 @@
     "@typescript-eslint/parameter-properties": 2,
     "react-refresh/only-export-components": [
       2,
-      { "allowConstantExport": true }
+      {
+        "allowConstantExport": true
+      }
     ],
-    "unicorn/filename-case": [2, { "case": "pascalCase", "ignore": [] }]
+    "unicorn/filename-case": [
+      2,
+      {
+        "case": "pascalCase",
+        "ignore": []
+      }
+    ]
   },
   "settings": {
     "react": {
