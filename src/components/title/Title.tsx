@@ -1,5 +1,8 @@
 import { TitleType } from "./TitleType";
 
+/**
+ * A stylized heading for starting sections of a document.
+ */
 const Title: React.FC<TitleProperties> = ({ type, content }) => {
   const determineTitleType = (): React.JSX.Element => {
     switch (type) {
@@ -19,7 +22,14 @@ const Title: React.FC<TitleProperties> = ({ type, content }) => {
 };
 
 interface TitleProperties {
+  /**
+   * The type of the title header, allows (1-6).
+   */
   type: TitleType;
+
+  /**
+   * The content text of the title.
+   */
   content: string;
 }
 
