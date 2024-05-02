@@ -88,5 +88,17 @@ jobs:
       - name: Lint E2E
         run: npm run lint
 
+      - name: Install PlayWright
+        run: npx install playwright
+
+      - name: Install Serve
+        run: npx install -g serve
+
       - name: Build Storybook
         run: npm run build-storybook
+
+      - name: Serve Storybook
+        run: serve storybook-static
+
+      - name: Run A11y Tests
+        run: npm run test-storybook

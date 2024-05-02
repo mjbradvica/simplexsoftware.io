@@ -12,7 +12,8 @@
     "prepare": "npx husky",
     "storybook": "storybook dev -p 6006",
     "cypress": "npx cypress open",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "bulma": "^1.0.0",
@@ -31,6 +32,7 @@
     "@storybook/react": "^8.0.9",
     "@storybook/react-vite": "^8.0.9",
     "@storybook/test": "^8.0.9",
+    "@storybook/test-runner": "^0.17.0",
     "@testing-library/cypress": "^10.0.1",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^15.0.5",
@@ -42,6 +44,7 @@
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "@vitest/coverage-v8": "^1.5.2",
+    "axe-playwright": "^2.0.1",
     "cypress": "^13.8.1",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
