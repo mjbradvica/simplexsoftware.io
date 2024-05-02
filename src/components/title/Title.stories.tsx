@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { TitleType } from "./TitleType";
-import Title from "./Title";
+import { TitleType, Title } from "../index";
 
 const meta: Meta<typeof Title> = {
   component: Title,
@@ -9,7 +8,7 @@ const meta: Meta<typeof Title> = {
 
 export default meta;
 
-export const One: StoryObj<typeof Title> = {
+export const One: StoryObj<typeof meta> = {
   args: {
     content: "Title",
     type: TitleType.One,
