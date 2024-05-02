@@ -49,13 +49,7 @@ describe("button", () => {
 
     const clickHandler = vi.fn();
 
-    render(
-      <Button
-        buttonType={ButtonType.Submit}
-        content={content}
-        onClick={clickHandler}
-      />,
-    );
+    render(<Button content={content} onClick={clickHandler} />);
 
     const element = screen.getByRole("button", { name: content });
 
