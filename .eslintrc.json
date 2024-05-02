@@ -12,12 +12,12 @@
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:unicorn/recommended",
     "plugin:sonarjs/recommended",
-    "plugin:react/recommended",
+    "plugin:react/all",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:compat/recommended",
-    "plugin:vitest/legacy-recommended",
+    "plugin:vitest/legacy-all",
     "plugin:jest-extended/all",
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended",
@@ -40,6 +40,12 @@
     "@typescript-eslint/explicit-member-accessibility": 2,
     "@typescript-eslint/member-ordering": 2,
     "@typescript-eslint/parameter-properties": 2,
+    "react/require-default-props": [0],
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
+    ],
+    "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
     "react-refresh/only-export-components": [
       2,
       {
@@ -52,6 +58,10 @@
         "case": "pascalCase",
         "ignore": []
       }
+    ],
+    "vitest/prefer-expect-assertions": [
+      2,
+      { "onlyFunctionsWithAsyncKeyword": true }
     ]
   },
   "overrides": [

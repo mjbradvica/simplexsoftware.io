@@ -1,4 +1,4 @@
-import { TitleType } from "./TitleType";
+import { TitleType, ComponentContent } from "../index";
 
 /**
  * A stylized heading for starting sections of a document.
@@ -16,7 +16,7 @@ export const Title: React.FC<TitleProperties> = ({
         return <h2 className="title is-2">{content}</h2>;
       }
       default: {
-        return <></>;
+        return <h6 className="title is-6">{content}</h6>;
       }
     }
   };
@@ -24,13 +24,9 @@ export const Title: React.FC<TitleProperties> = ({
   return determineTitleType();
 };
 
-interface TitleProperties {
+interface TitleProperties extends ComponentContent {
   /**
    * The type of the title header, allows (1-6).
    */
   type: TitleType;
-  /**
-   * The content text of the title.
-   */
-  content: string;
 }

@@ -5,7 +5,7 @@ describe("title", () => {
   it("one works correctly", () => {
     const content = "title";
 
-    render(<Title type={TitleType.One} content={content} />);
+    render(<Title content={content} type={TitleType.One} />);
 
     const element = screen.getByRole("heading", { name: content });
 
@@ -16,7 +16,7 @@ describe("title", () => {
   it("two works correctly", () => {
     const content = "title";
 
-    render(<Title type={TitleType.Two} content={content} />);
+    render(<Title content={content} type={TitleType.Two} />);
 
     const element = screen.getByRole("heading", { name: content });
 
@@ -27,10 +27,11 @@ describe("title", () => {
   it("no value works correctly", () => {
     const content = "title";
 
-    render(<Title type={999 as TitleType} content={content} />);
+    render(<Title content={content} type={999 as TitleType} />);
 
     const element = screen.queryByRole("heading", { name: content });
 
-    expect(element).not.toBeInTheDocument();
+    expect(element).toHaveClass("title");
+    expect(element).toHaveClass("is-6");
   });
 });
