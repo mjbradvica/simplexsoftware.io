@@ -9,7 +9,7 @@
     "lint": "eslint . --fix --max-warnings 0",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "prepare": "husky",
+    "prepare": "npx husky",
     "storybook": "storybook dev -p 6006",
     "cypress": "npx cypress open",
     "build-storybook": "storybook build",
