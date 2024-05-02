@@ -89,7 +89,7 @@ jobs:
         run: npm run lint
 
       - name: Install PlayWright
-        run: npx install playwright
+        run: npx playwright install
 
       - name: Install Serve
         run: npx install -g serve
