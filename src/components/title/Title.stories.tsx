@@ -17,3 +17,38 @@ export const SizeOne: StoryObj<typeof meta> = {
     titleType: TitleType.One,
   },
 };
+
+export const SizeTwo: StoryObj<typeof meta> = {
+  args: {
+    content: "Title",
+    titleType: TitleType.Two,
+  },
+};
+
+export const SizeThree: StoryObj<typeof meta> = {
+  args: {
+    content: "Title",
+    titleType: TitleType.Three,
+  },
+};
+
+export const SizeFour: StoryObj<typeof meta> = {
+  args: {
+    content: "Title",
+    titleType: TitleType.Four,
+  },
+};
+
+export const SizeFive: StoryObj<typeof meta> = {
+  args: {
+    content: "Title",
+    titleType: TitleType.Five,
+  },
+};
+
+export const SizeSix: StoryObj<typeof meta> = {
+  args: {
+    content: "Title",
+    titleType: TitleType.Six,
+  },
+};

@@ -46,6 +46,7 @@
       { "namedComponents": "arrow-function" }
     ],
     "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
+    "react/jsx-no-literals": 0,
     "react-refresh/only-export-components": [
       2,
       {

@@ -35,6 +35,39 @@ describe("title", () => {
     expect(element).toHaveClass("is-3");
   });
 
+  it("four works correctly", () => {
+    const content = "title";
+
+    render(<Title content={content} titleType={TitleType.Four} />);
+
+    const element = screen.getByRole("heading", { name: content, level: 4 });
+
+    expect(element).toHaveClass("title");
+    expect(element).toHaveClass("is-4");
+  });
+
+  it("five works correctly", () => {
+    const content = "title";
+
+    render(<Title content={content} titleType={TitleType.Five} />);
+
+    const element = screen.getByRole("heading", { name: content, level: 5 });
+
+    expect(element).toHaveClass("title");
+    expect(element).toHaveClass("is-5");
+  });
+
+  it("six works correctly", () => {
+    const content = "title";
+
+    render(<Title content={content} titleType={TitleType.Six} />);
+
+    const element = screen.getByRole("heading", { name: content, level: 6 });
+
+    expect(element).toHaveClass("title");
+    expect(element).toHaveClass("is-6");
+  });
+
   it("no value works correctly", () => {
     const content = "title";
 

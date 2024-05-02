@@ -18,6 +18,15 @@ export const Title: React.FC<TitleProperties> = ({
       case TitleType.Three: {
         return <h3 className="title is-3">{content}</h3>;
       }
+      case TitleType.Four: {
+        return <h4 className="title is-4">{content}</h4>;
+      }
+      case TitleType.Five: {
+        return <h5 className="title is-5">{content}</h5>;
+      }
+      case TitleType.Six: {
+        return <h6 className="title is-6">{content}</h6>;
+      }
       default: {
         return <h6 className="title is-6">{content}</h6>;
       }
