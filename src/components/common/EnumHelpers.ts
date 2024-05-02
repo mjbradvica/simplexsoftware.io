@@ -3,12 +3,12 @@ export function expandToStorybookArgument<TEnum extends object>(
 ): StoryBookEnumArgument {
   return {
     options: Object.values(enumeration).filter(
-      (value) => typeof value === "number",
+      (value) => !Number.isNaN(Number(value)),
     ) as Array<number>,
     control: {
       type: "select",
-      labels: Object.values(enumeration).filter(
-        (value) => typeof value === "string",
+      labels: Object.values(enumeration).filter((value) =>
+        Number.isNaN(Number(value)),
       ) as Array<string>,
     },
   };
