@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Title from "./Title";
-import { TitleType } from "./TitleType";
+import { TitleType, Title } from "../index";
 
 describe("title", () => {
   it("one works correctly", () => {
