@@ -91,11 +91,13 @@ jobs:
       - name: Install PlayWright
         run: npx playwright install
 
-      - name: Run Storybook
-        run: npm run storybook
+      - name: Install Serve
+        run: npm install --global serve
 
-      - name: Run a11y Tests
-        run: npm run test-storybook -- --browsers firefox chromium
+      - name: Serve Storybook & Run Tests
+        run: |
+          serve storybook-static -l 3000
+          npx wait-on tcp:3000 && npm run test-storybook -- --browsers firefox chromium --url http://localhost:3000
 
       - name: Build Storybook
         run: npm run build-storybook
