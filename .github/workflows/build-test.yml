@@ -99,6 +99,6 @@ jobs:
 
       - name: Serve Storybook & Run Tests
         run: |
-          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue"
-          serve storybook-static -l 3000
-          npx wait-on tcp:3000 && npm run test-storybook -- --browsers firefox chromium --url http://localhost:3000
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "serve storybook-static -l 3000" \
+            "npx wait-on tcp:3000 && npm run test-storybook -- --browsers firefox chromium --url http://localhost:3000"
