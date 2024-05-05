@@ -1,0 +1,22 @@
+@charset "utf-8";
+@use "../../node_modules/bulma/sass/utilities/functions.scss";
+@use "../../node_modules/bulma/sass/utilities/derived-variables.scss";
+
+$emerald: #4ed091;
+$veronica: #b117e8;
+$safety-orange: #f70;
+$primary: $emerald;
+$secondary: $veronica;
+$tertiary: $safety-orange;
+$secondary-invert: bulmaFindColorInvert($secondary);
+$tertiary-invert: bulmaFindColorInvert($tertiary);
+$custom-colors: (
+  "secondary": (
+    $secondary,
+    $secondary-invert,
+  ),
+  "tertiary": (
+    $tertiary,
+    $tertiary-invert,
+  ),
+);
