@@ -1,3 +1,4 @@
 @charset "utf-8";
-@use "./colors.scss";
-@use "../../node_modules/bulma/bulma.scss";
+@import "./colors";
+@import "./fonts";
+@import "../../node_modules/bootstrap/scss/bootstrap";

@@ -1,9 +1,3 @@
 {
-  "extends": ["stylelint-config-standard-scss"],
-  "rules": {
-    "function-name-case": [
-      "lower",
-      { "ignoreFunctions": ["bulmaFindColorInvert"] }
-    ]
-  }
+  "extends": ["stylelint-config-standard-scss"]
 }
