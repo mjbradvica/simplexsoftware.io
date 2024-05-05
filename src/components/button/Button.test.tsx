@@ -11,7 +11,7 @@ describe("button", () => {
     const element = screen.getByRole("button", { name: content });
 
     expect(element).toHaveAttribute("type", "button");
-    expect(element).toHaveClass("button is-responsive");
+    expect(element).toHaveClass("btn btn-primary");
   });
 
   it("projects content", () => {

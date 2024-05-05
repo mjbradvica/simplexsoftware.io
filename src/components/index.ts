@@ -1,6 +1,7 @@
 // Common
 export type { default as ComponentContent } from "./interfaces/ComponentContent.ts";
 export type { default as ChildNode } from "./interfaces/ChildNode.ts";
+export { ColorType, determineColorType } from "./common/ColorType.ts";
 
 // Helpers
 export { expandToStorybookArgument } from "./common/EnumHelpers.ts";

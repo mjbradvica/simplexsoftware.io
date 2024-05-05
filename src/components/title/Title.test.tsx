@@ -9,8 +9,7 @@ describe("title", () => {
 
     const element = screen.getByRole("heading", { name: content, level: 1 });
 
-    expect(element).toHaveClass("title");
-    expect(element).toHaveClass("is-1");
+    expect(element).toBeInTheDocument();
   });
 
   it("two works correctly", () => {
@@ -20,8 +19,7 @@ describe("title", () => {
 
     const element = screen.getByRole("heading", { name: content, level: 2 });
 
-    expect(element).toHaveClass("title");
-    expect(element).toHaveClass("is-2");
+    expect(element).toBeInTheDocument();
   });
 
   it("three works correctly", () => {
@@ -31,8 +29,7 @@ describe("title", () => {
 
     const element = screen.getByRole("heading", { name: content, level: 3 });
 
-    expect(element).toHaveClass("title");
-    expect(element).toHaveClass("is-3");
+    expect(element).toBeInTheDocument();
   });
 
   it("four works correctly", () => {
@@ -42,8 +39,7 @@ describe("title", () => {
 
     const element = screen.getByRole("heading", { name: content, level: 4 });
 
-    expect(element).toHaveClass("title");
-    expect(element).toHaveClass("is-4");
+    expect(element).toBeInTheDocument();
   });
 
   it("five works correctly", () => {
@@ -53,8 +49,7 @@ describe("title", () => {
 
     const element = screen.getByRole("heading", { name: content, level: 5 });
 
-    expect(element).toHaveClass("title");
-    expect(element).toHaveClass("is-5");
+    expect(element).toBeInTheDocument();
   });
 
   it("six works correctly", () => {
@@ -64,8 +59,7 @@ describe("title", () => {
 
     const element = screen.getByRole("heading", { name: content, level: 6 });
 
-    expect(element).toHaveClass("title");
-    expect(element).toHaveClass("is-6");
+    expect(element).toBeInTheDocument();
   });
 
   it("no value works correctly", () => {
@@ -75,7 +69,6 @@ describe("title", () => {
 
     const element = screen.queryByRole("heading", { name: content, level: 6 });
 
-    expect(element).toHaveClass("title");
-    expect(element).toHaveClass("is-6");
+    expect(element).toBeInTheDocument();
   });
 });

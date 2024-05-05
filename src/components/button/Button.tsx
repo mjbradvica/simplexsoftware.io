@@ -1,13 +1,19 @@
-import { ComponentContent, ButtonType } from "../index";
+import {
+  ComponentContent,
+  ButtonType,
+  ColorType,
+  determineColorType,
+} from "../index";
 
 export const Button: React.FC<ButtonProperties> = ({
+  colorType = ColorType.Primary,
   content,
   onClick,
   buttonType = ButtonType.Button,
 }: ButtonProperties) => {
   return (
     <button
-      className="button is-responsive"
+      className={`btn btn-${determineColorType(colorType)}`}
       onClick={onClick}
       type={buttonType == ButtonType.Button ? "button" : "submit"}
     >
@@ -28,4 +34,9 @@ interface ButtonProperties extends ComponentContent {
    * The type of the button. Defaults to "button".
    */
   readonly buttonType?: ButtonType;
+
+  /**
+   * The color type of the button. Defaults to primary.
+   */
+  readonly colorType?: ColorType;
 }

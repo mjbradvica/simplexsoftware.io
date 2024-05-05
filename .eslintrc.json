@@ -40,18 +40,23 @@
     "@typescript-eslint/explicit-member-accessibility": 2,
     "@typescript-eslint/member-ordering": 2,
     "@typescript-eslint/parameter-properties": 2,
-    "react/require-default-props": [0],
     "react/function-component-definition": [
       2,
       { "namedComponents": "arrow-function" }
     ],
     "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
+    "react/jsx-no-bind": [2, { "allowArrowFunctions": true }],
     "react/jsx-no-literals": 0,
     "react-refresh/only-export-components": [
       2,
       {
         "allowConstantExport": true
       }
+    ],
+    "react/require-default-props": [0],
+    "unicorn/consistent-function-scoping": [
+      2,
+      { "checkArrowFunctions": false }
     ],
     "unicorn/filename-case": [
       2,

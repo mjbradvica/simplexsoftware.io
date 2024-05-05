@@ -6,3 +6,4 @@ src/vite-env.d.ts
 src/setupTests.ts
 src/main.tsx
 cypress/support
+storybook-static
