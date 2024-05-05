@@ -45,6 +45,7 @@
       { "namedComponents": "arrow-function" }
     ],
     "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
+    "react/jsx-max-depth": [2, { "max": 5 }],
     "react/jsx-no-bind": [2, { "allowArrowFunctions": true }],
     "react/jsx-no-literals": 0,
     "react-refresh/only-export-components": [

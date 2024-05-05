@@ -7,7 +7,7 @@ export default mergeConfig(
     test: {
       coverage: {
         enabled: true,
-        exclude: ["main.tsx", "**/**.stories.*"],
+        exclude: ["main.tsx", "**/**.stories.*", "**/**.routes.*"],
         thresholds: {
           branches: 100,
         },
