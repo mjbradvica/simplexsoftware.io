@@ -3,7 +3,6 @@ import "../src/styles/main.scss";
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: "^on.*" },
     layout: "centered",
     controls: {
       matchers: {

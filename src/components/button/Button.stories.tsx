@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 import {
   Button,
   ButtonType,
@@ -9,6 +10,7 @@ import {
 const meta: Meta<typeof Button> = {
   component: Button,
   tags: ["autodocs"],
+  args: { onClick: fn() },
   argTypes: {
     buttonType: expandToStorybookArgument(ButtonType),
     colorType: expandToStorybookArgument(ColorType),
