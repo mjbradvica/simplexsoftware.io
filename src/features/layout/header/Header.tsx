@@ -8,7 +8,7 @@ import { AppRoute } from "../../../app/App.routes";
 export const Header: React.FC = () => {
   return (
     <header>
-      <nav className="navbar bg-body-tertiary">
+      <nav className="navbar bg-body">
         <Container>
           <Link to={AppRoute}>SimplexSoftware.io</Link>
         </Container>
