@@ -1,8 +1,8 @@
 import App from "./App";
-import { render } from "@testing-library/react";
+import { renderInMemoryBrowser } from "../infrastructure";
 
 describe("app", () => {
   it("renders", () => {
-    render(<App />);
+    renderInMemoryBrowser(<App />);
   });
 });

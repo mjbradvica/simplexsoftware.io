@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { Container } from "../../../components";
+import { AppRoute } from "../../../app/App.routes";
 
 /**
  * Defines a component that serves as the primary navigation component for the site.
@@ -8,9 +10,7 @@ export const Header: React.FC = () => {
     <header>
       <nav className="navbar bg-body-tertiary">
         <Container>
-          <a className="navbar-brand" href="#">
-            SimplexSoftware.io
-          </a>
+          <Link to={AppRoute}>SimplexSoftware.io</Link>
         </Container>
       </nav>
     </header>

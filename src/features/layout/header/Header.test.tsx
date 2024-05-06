@@ -1,8 +1,8 @@
-import { render } from "@testing-library/react";
 import { Header } from "./Header";
+import { renderInMemoryBrowser } from "../../../infrastructure";
 
 describe("header", () => {
   it("renders", () => {
-    render(<Header />);
+    renderInMemoryBrowser(<Header />);
   });
 });
