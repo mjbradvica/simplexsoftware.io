@@ -1,17 +1,9 @@
 {
   "recommendations": [
-    "aaron-bond.better-comments",
-    "webben.browserslist",
-    "streetsidesoftware.code-spell-checker",
-    "editorconfig.editorconfig",
+    "Vue.volar",
+    "vitest.explorer",
     "dbaeumer.vscode-eslint",
-    "github.vscode-github-actions",
-    "eamodio.gitlens",
-    "znck.grammarly",
-    "zignd.html-css-class-completion",
-    "davidanson.vscode-markdownlint",
-    "pkief.material-icon-theme",
-    "esbenp.prettier-vscode",
-    "vitest.explorer"
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode"
   ]
 }

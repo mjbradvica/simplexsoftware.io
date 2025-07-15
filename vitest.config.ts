@@ -1,21 +1,14 @@
-import { defineConfig, mergeConfig } from "vitest/config";
-import viteConfig from "./vite.config";
+import { fileURLToPath } from 'node:url'
+import { mergeConfig, defineConfig, configDefaults } from 'vitest/config'
+import viteConfig from './vite.config'
 
 export default mergeConfig(
   viteConfig,
   defineConfig({
     test: {
-      coverage: {
-        enabled: true,
-        exclude: ["main.tsx", "**/**.stories.*", "**/**.routes.*"],
-        thresholds: {
-          branches: 100,
-        },
-      },
-      environment: "jsdom",
-      globals: true,
-      root: "src",
-      setupFiles: ["setupTests.ts"],
+      environment: 'jsdom',
+      exclude: [...configDefaults.exclude, 'e2e/**'],
+      root: fileURLToPath(new URL('./', import.meta.url)),
     },
   }),
-);
+)
