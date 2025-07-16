@@ -1,5 +1,8 @@
 import { globalIgnores } from "eslint/config";
-import { defineConfigWithVueTs, vueTsConfigs } from "@vue/eslint-config-typescript";
+import {
+  defineConfigWithVueTs,
+  vueTsConfigs,
+} from "@vue/eslint-config-typescript";
 import pluginVue from "eslint-plugin-vue";
 import pluginVitest from "@vitest/eslint-plugin";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -20,6 +23,9 @@ export default defineConfigWithVueTs(
   },
   {
     ...pluginCypress.configs.recommended,
-    files: ["cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}", "cypress/support/**/*.{js,ts,jsx,tsx}"],
+    files: [
+      "cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}",
+      "cypress/support/**/*.{js,ts,jsx,tsx}",
+    ],
   },
 );
