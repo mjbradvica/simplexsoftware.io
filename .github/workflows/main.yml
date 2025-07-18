@@ -1,0 +1,19 @@
+name: main
+
+on: [push]
+
+jobs:
+  prepare:
+    uses: ./.github/workflows/prepare.yml
+
+  cypress:
+    uses: ./.github/workflows/cypress.yml
+
+  deploy-application:
+    needs: [prepare, cypress]
+    uses: ./.github/workflows/deploy.yml
+    with:
+      environment: development
+      app_name: asc-owens-app-dev
+    secrets:
+      publish_profile: ${{ secrets.APP_OWENS_DEV }}
