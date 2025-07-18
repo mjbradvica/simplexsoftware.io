@@ -6,7 +6,7 @@
           <RouterLink :to="homeNamedRoute">
             <div class="navbar-item">
               <img :src="brand" alt="brand" class="image is-square" />
-              <h1 class="title">Simplex Software</h1>
+              <TitleElement :type="TitleType.One" content="Simplex Software" />
             </div>
           </RouterLink>
         </div>
@@ -29,7 +29,8 @@
 import { homeNamedRoute } from "@/features/home/home.routes";
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
-import brand from "../../../assets/brand.png";
+import brand from "@/assets/brand.png";
+import { TitleType, TitleElement } from "@/common";
 
 const theme = ref<string>("light");
 const changeTheme = (): void => {
