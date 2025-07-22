@@ -1,6 +1,6 @@
 <template>
   <HeaderView />
-  <main>
+  <main class="container">
     <RouterView />
   </main>
   <FooterView />
