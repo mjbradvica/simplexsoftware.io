@@ -3,7 +3,13 @@
     "Vue.volar",
     "vitest.explorer",
     "dbaeumer.vscode-eslint",
-    "EditorConfig.EditorConfig",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "pkief.material-icon-theme",
+    "github.vscode-github-actions",
+    "ms-azuretools.vscode-azureappservice",
+    "editorconfig.editorconfig",
+    "webben.browserslist",
+    "streetsidesoftware.code-spell-checker",
+    "deque-systems.vscode-axe-linter"
   ]
 }

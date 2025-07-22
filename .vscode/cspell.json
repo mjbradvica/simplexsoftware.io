@@ -1,0 +1,4 @@
+{
+  "words": ["autodocs", "webapps", "bulma"],
+  "ignorePaths": ["dist/**", "coverage/**", "public/**"]
+}
