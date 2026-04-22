@@ -3,10 +3,9 @@ import {
   defineConfigWithVueTs,
   vueTsConfigs,
 } from "@vue/eslint-config-typescript";
+import eslint from "@eslint/js";
 import pluginVue from "eslint-plugin-vue";
 import pluginVitest from "@vitest/eslint-plugin";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import pluginCypress from "eslint-plugin-cypress";
 import prettier from "eslint-plugin-prettier/recommended";
 
@@ -15,6 +14,7 @@ export default defineConfigWithVueTs(
     files: ["**/*.{ts,mts,tsx,vue}"],
   },
   globalIgnores(["**/dist/**", "**/dist-ssr/**", "**/coverage/**"]),
+  eslint.configs.recommended,
   vueTsConfigs.strictTypeChecked,
   pluginVue.configs["flat/recommended"],
   prettier,

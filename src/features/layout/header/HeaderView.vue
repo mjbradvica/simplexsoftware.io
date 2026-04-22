@@ -1,70 +1,63 @@
 <template>
   <header>
-    <div class="p-4">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <RouterLink :to="homeNamedRoute">
-            <div class="navbar-item">
-              <img :src="brand" alt="brand" class="image is-square" />
-              <TitleElement :type="TitleType.One" content="Simplex Software" />
-            </div>
-          </RouterLink>
-        </div>
-        <div class="navbar-menu">
-          <div class="navbar-start">
-            <div class="navbar-item">
-              <div class="control">
-                <input
-                  :id="searchId"
-                  class="input"
-                  type="text"
-                  placeholder="Site Search"
-                  name="site-search"
-                  title="Hit Enter to search"
-                  :value="searchValue"
-                  @input="handleSearchInput"
-                />
-              </div>
-              <button
-                v-if="searchValue !== ''"
-                class="button is-info"
-                @click="handleSearch"
-              >
-                Search
-              </button>
-            </div>
-          </div>
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="select">
-                <select :value="theme" @change="changeTheme">
-                  <option value="light" selected>Light</option>
-                  <option value="dark">Dark</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <hr class="mt-0" />
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container border-bottom">
+        <RouterLink
+          :to="homeNamedRoute"
+          class="navbar-brand d-flex align-items-center gap-2"
+        >
+          <img :src="brand" alt="brand" class="img-fluid" />
+          <TitleElement :type="TitleType.One" content="Simplex Software" />
+        </RouterLink>
+        <form class="d-flex align-items-center gap-2">
+          <input
+            :id="searchId"
+            class="form-control"
+            type="text"
+            placeholder="Site Search"
+            name="site-search"
+            title="Hit Enter to search"
+            :value="searchValue"
+            @input="handleSearchInput"
+          />
+          <button
+            v-if="searchValue !== ''"
+            class="btn btn-primary"
+            @click="handleSearch"
+          >
+            Search
+          </button>
+          <select
+            class="form-select"
+            :value="theme"
+            @change="changeTheme($event)"
+          >
+            <option value="light" selected>Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </form>
+      </div>
+    </nav>
   </header>
 </template>
 
 <script setup lang="ts">
 import { homeNamedRoute } from "@/features/home/home.routes";
-import { ref, useId } from "vue";
+import { ref, useId, watch } from "vue";
 import { RouterLink } from "vue-router";
-import brand from "@/assets/brand.png";
+import brand from "@/assets/brand32.png";
 import { TitleType, TitleElement } from "@/common";
 
 const searchId = useId();
 
 const theme = ref<string>("light");
-const changeTheme = (): void => {
-  document.getElementById("root")?.classList.toggle("theme-light");
-  document.getElementById("root")?.classList.toggle("theme-dark");
+const changeTheme = (event: Event): void => {
+  theme.value = (event.target as HTMLInputElement).value;
 };
+
+watch(theme, () => {
+  document.getElementById("root")?.setAttribute("data-bs-theme", theme.value);
+});
 
 const searchValue = ref<string>("");
 const handleSearchInput = (event: Event): void => {

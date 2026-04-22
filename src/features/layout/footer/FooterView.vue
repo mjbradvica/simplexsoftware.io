@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer has-background-primary">
-    <div class="content has-text-centered">
+  <footer class="container border-top">
+    <div class="p-4">
       <p><strong>Copyright 2025. All rights reserved.</strong></p>
     </div>
   </footer>
