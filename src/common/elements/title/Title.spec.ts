@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/vue";
 import { describe, expect, it } from "vitest";
 import TitleElement from "./TitleElement.vue";
-import { TitleType } from "./TitleType";
+import { TitleType } from "./title-type";
 
 describe("title", () => {
   it("heading one is correct", () => {

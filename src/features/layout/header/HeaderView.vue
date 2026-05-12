@@ -56,7 +56,7 @@ const changeTheme = (event: Event): void => {
 };
 
 watch(theme, () => {
-  document.getElementById("root")?.setAttribute("data-bs-theme", theme.value);
+  document.querySelector("#root")?.setAttribute("data-bs-theme", theme.value);
 });
 
 const searchValue = ref<string>("");
