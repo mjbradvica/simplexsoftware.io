@@ -1,4 +1,10 @@
 {
   "words": ["autodocs", "webapps", "bulma"],
-  "ignorePaths": ["dist/**", "coverage/**", "public/**"]
+  "ignorePaths": [
+    "dist/**",
+    "coverage/**",
+    "public/**",
+    ".gitignore",
+    ".gitattributes"
+  ]
 }
