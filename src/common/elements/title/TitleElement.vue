@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { TitleType } from "./TitleType";
+import { TitleType } from "./title-type";
 
 interface TitleElementProperties {
   type: TitleType;

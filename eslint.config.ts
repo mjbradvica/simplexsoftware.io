@@ -7,6 +7,8 @@ import eslint from "@eslint/js";
 import pluginVue from "eslint-plugin-vue";
 import pluginVitest from "@vitest/eslint-plugin";
 import pluginCypress from "eslint-plugin-cypress";
+import unicorn from "eslint-plugin-unicorn";
+import compat from "eslint-plugin-compat";
 import prettier from "eslint-plugin-prettier/recommended";
 
 export default defineConfigWithVueTs(
@@ -17,7 +19,25 @@ export default defineConfigWithVueTs(
   eslint.configs.recommended,
   vueTsConfigs.strictTypeChecked,
   pluginVue.configs["flat/recommended"],
+  unicorn.configs["recommended"],
+  compat.configs["flat/recommended"],
   prettier,
+  {
+    rules: {
+      "@typescript-eslint/explicit-function-return-type": "error",
+      "@typescript-eslint/member-ordering": "error",
+      "unicorn/prevent-abbreviations": [
+        "error",
+        { allowList: { e2e: true, env: true } },
+      ],
+    },
+  },
+  {
+    files: ["**/*.vue"],
+    rules: {
+      "unicorn/filename-case": ["error", { case: "pascalCase" }],
+    },
+  },
   {
     ...pluginVitest.configs.recommended,
     files: ["src/**/__tests__/*"],
