@@ -15,7 +15,7 @@ export default defineConfigWithVueTs(
   {
     files: ["**/*.{ts,mts,tsx,vue}"],
   },
-  globalIgnores(["**/dist/**", "**/dist-ssr/**", "**/coverage/**"]),
+  globalIgnores(["**/dist/**", "**/dist-ssr/**", "**/coverage/**", "env.d.ts"]),
   eslint.configs.recommended,
   vueTsConfigs.strictTypeChecked,
   pluginVue.configs["flat/recommended"],
@@ -48,5 +48,13 @@ export default defineConfigWithVueTs(
       "cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}",
       "cypress/support/**/*.{js,ts,jsx,tsx}",
     ],
+    rules: {
+      "unicorn/prevent-abbreviations": [
+        "error",
+        {
+          ignore: ["e2e$", /^ignore/i],
+        },
+      ],
+    },
   },
 );
