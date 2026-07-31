@@ -49,5 +49,5 @@
 
 <script setup lang="ts">
 import brand from "@/assets/brand.png";
-import FeatureCard from "@/common/feature-card/FeatureCard.vue";
+import FeatureCard from "@/common/components/feature-card/FeatureCard.vue";
 </script>
