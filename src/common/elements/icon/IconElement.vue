@@ -14,16 +14,23 @@ interface IconElementProperties {
 const properties = defineProps<IconElementProperties>();
 
 const determineIcon = (): string => {
-  // switch (properties.type) {
-  //   case IconType.PlugFill: {
-  //     return "bi-plug-fill";
-  //   }
-  //   default: {
-  //     return "";
-  //   }
-  // }
-
-  return "bi-plug-fill";
+  switch (properties.type) {
+    case IconType.PlugFill: {
+      return "bi-plug-fill";
+    }
+    case IconType.Plugin: {
+      return "bi-plugin";
+    }
+    case IconType.ArrowDownCircle: {
+      return "bi-arrow-down-circle";
+    }
+    case IconType.CheckSquare: {
+      return "bi-check-square";
+    }
+    default: {
+      return "";
+    }
+  }
 };
 
 const determineSize = (): string => {

@@ -12,6 +12,7 @@ import compat from "eslint-plugin-compat";
 import sonar from "eslint-plugin-sonarjs";
 import testingLibrary from "eslint-plugin-testing-library";
 import jestDom from "eslint-plugin-jest-dom-ya";
+import storybook from "eslint-plugin-storybook";
 import prettier from "eslint-plugin-prettier/recommended";
 
 export default defineConfigWithVueTs(
@@ -19,6 +20,7 @@ export default defineConfigWithVueTs(
     files: ["**/*.{ts,mts,tsx,vue}"],
   },
   globalIgnores([
+    "**/.storybook/**",
     "**/dist/**",
     "**/dist-ssr/**",
     "**/coverage/**",
@@ -60,5 +62,9 @@ export default defineConfigWithVueTs(
       "cypress/support/**/*.{js,ts,jsx,tsx}",
     ],
     rules: {},
+  },
+  {
+    files: ["**/*.stories.ts"],
+    ...storybook.configs["flat/recommended"],
   },
 );

@@ -10,8 +10,14 @@
           </p>
         </div>
         <div class="d-flex justify-content-center gap-3">
-          <button class="btn btn-outline-primary">Get Started</button>
-          <button class="btn btn-outline-primary">GitHub</button>
+          <ButtonLinkElement
+            content="Get Started"
+            link="https://www.simplexsoftware.io/docs"
+          />
+          <ButtonLinkElement
+            content="GitHub"
+            link="https://www.github.com/mjbradvica"
+          />
         </div>
       </div>
       <div class="col-lg-6">
@@ -26,18 +32,21 @@
       <div class="row">
         <div class="col">
           <FeatureCard
+            :icon-type="IconType.Plugin"
             title="Plugin-Based Libraries"
-            sub-title="Use one libraries, or all of them."
+            sub-title="Use one library, or all of them."
           />
         </div>
         <div class="col">
           <FeatureCard
+            :icon-type="IconType.ArrowDownCircle"
             title="Dependency Injection Enabled"
             sub-title="Proper modular design at the core of everything."
           />
         </div>
         <div class="col">
           <FeatureCard
+            :icon-type="IconType.CheckSquare"
             title="Designed For Testing"
             sub-title="Unit testing as a first-class citizen."
           />
@@ -50,4 +59,7 @@
 <script setup lang="ts">
 import brand from "@/assets/brand.png";
 import FeatureCard from "@/common/components/feature-card/FeatureCard.vue";
+import ButtonLinkElement from "@/common/elements/button-link/ButtonLinkElement.vue";
+import ButtonElement from "@/common/elements/button/ButtonElement.vue";
+import { IconType } from "@/common/elements/icon/icon-type";
 </script>

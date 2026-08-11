@@ -10,7 +10,9 @@
     "test:unit": "vitest",
     "test:e2e": "npx cypress open",
     "lint": "eslint . --fix --max-warnings 0",
-    "prepare": "npx husky"
+    "prepare": "npx husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
@@ -26,7 +28,7 @@
     "@testing-library/user-event": "^14.6.1",
     "@testing-library/vue": "^8.1.0",
     "@tsconfig/node22": "^22.0.2",
-    "@types/jsdom": "^28.0.1",
+    "@types/jsdom": "^30.0.0",
     "@types/node": "^26.1.2",
     "@vitejs/plugin-vue": "^6.0.0",
     "@vitest/eslint-plugin": "^1.2.7",
@@ -37,12 +39,12 @@
     "eslint": "^10.2.1",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-compat": "^7.0.2",
-    "eslint-plugin-cypress": "^6.3.1",
+    "eslint-plugin-cypress": "^7.0.0",
     "eslint-plugin-jest-dom-ya": "^1.0.1",
     "eslint-plugin-prettier": "^5.5.1",
     "eslint-plugin-sonarjs": "^4.0.3",
     "eslint-plugin-testing-library": "^7.16.2",
-    "eslint-plugin-unicorn": "^72.0.0",
+    "eslint-plugin-unicorn": "^73.0.0",
     "eslint-plugin-vue": "^10.6.2",
     "jiti": "^2.4.2",
     "jsdom": "^30.0.1",
@@ -55,6 +57,9 @@
     "vite": "^8.0.9",
     "vite-plugin-vue-devtools": "^8.0.5",
     "vitest": "^4.0.16",
-    "vue-tsc": "^3.2.1"
+    "vue-tsc": "^3.2.1",
+    "storybook": "^10.5.7",
+    "@storybook/vue3-vite": "^10.5.7",
+    "eslint-plugin-storybook": "^10.5.7"
   }
 }

@@ -1,1 +1,3 @@
-export enum IconSize {}
+export enum IconSize {
+  One = 1,
+}
